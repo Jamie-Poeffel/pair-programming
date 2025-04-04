@@ -1,3 +1,5 @@
+import { isLeapYear } from "./utils";
+
 export type Employment = {
   startDate: Date;
   untilDate: Date;
@@ -7,11 +9,6 @@ export type Employment = {
 
 export function calculateProRataVacationDays(employment: Employment): number {
   const { startDate, untilDate, percentage, vacationDays } = employment;
-
-  // Helper function to check if a year is a leap year
-  const isLeapYear = (year: number): boolean => {
-    return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
-  };
 
   // Calculate the number of days between startDate and untilDate, considering leap years
   let totalDays = 0;
