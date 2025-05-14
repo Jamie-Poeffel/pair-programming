@@ -32,3 +32,5 @@ export function calculatePayslip(salary: Salary): Payslip {
   };
   return result;
 }
+
+
